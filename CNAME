@@ -1,4 +1,1 @@
-echo "archive.nptl.ac.in" > CNAME
-git add CNAME
-git commit -m "Added CNAME for custom domain"
-git push
+archive.nptl.ac.in
