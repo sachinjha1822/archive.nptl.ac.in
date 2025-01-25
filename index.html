@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Certificate</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button id="downloadButton">Course Certificate</button>
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = 'NPTL24HS150S105400067704194753.jpg'; // Replace with the actual URL to your image.
+            link.download = 'NPTL24HS150S105400067704194753.jpg'; // File name to save as.
+            document.body.appendChild(link); // Append to the DOM for direct download.
+            link.click();
+            document.body.removeChild(link); // Clean up after download.
+        });
+    </script>
+</body>
+</html>
